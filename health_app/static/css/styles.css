@@ -1,0 +1,65 @@
+h1{
+    color: blue;
+}
+
+#quote {
+    color: rgb(0, 102, 255);
+}
+
+.calculator_quote{
+    color: rgb(0, 102, 255);
+}
+
+
+.body{
+    /* The image used */
+    background-image: url(../css/images/white_space_flip.jpg);
+  
+    /* Full height */
+    height: 100vh;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #calculator{
+      border-color: black;
+      border-width: medium;
+      border-style: solid;
+
+      background-color: rgba(3, 139, 37, 0.267);
+
+      margin-left: 20%;
+
+  }
+
+  #calculator_results{
+    margin-left: 20%;
+  }
+
+  #table_notes{
+    margin-left: 20%;
+  }
+
+  #food_results{
+    margin-left: 12%;
+  }
+
+  #calculator h5 {
+      padding-top: 1rem;
+  }
+
+  #food-form {
+      padding-top:3rem;
+      padding-left: 3.8%;
+  }
+
+  table {
+    opacity: 80%;
+  }
+
+
+
+

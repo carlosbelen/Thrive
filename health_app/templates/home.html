@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}        
+        <h1>Welcome {{ current_user.username }}</h1>
+        <p></p>
+        <p></p>
+        <h2 id="quote">"My Mission in Life is not merely to survive, but to THRIVE; And to do so with passion, some compassion, some humor, and some style." - Maya Agelou</h2>
+        <p></p>
+        <p></p>
+        <!-- jengo is python based. so everytime we use squigly with percent, it allows us to do some python -->
+        {% if current_user.is_authenticated %}
+            <h2>Let us know how you feel about this site in our blog section so that we may better serve you.</h2>
+        {% else %}
+        <h2>Please Register and Login</h2>
+    
+        {% endif %}
+    {% endblock content %}

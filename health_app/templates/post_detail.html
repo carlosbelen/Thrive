@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!-- the home route will handle this too -->
+    <a href="{{ url_for('blog') }}">
+        <button class="btn btn-primary">Back to blog</button>
+    </a>
+    
+    <div class="container">
+        <!-- checking to see who is the authorized user and then shows the username: -->
+        <h1>This post belongs to: {{ post.author.username }}</h1>
+        <hr>
+        <h3>Post Info: </h3>
+        <hr>
+        <h3>Title: {{ post.title }}</h3>
+        <p>Content: {{ post.content }}</p>
+
+        <blockquote>Date Created: {{ post.date_created }}></blockquote>
+
+        {% if current_user.id == post.user_id %}
+            <a href="{{ url_for('post_update', post_id = post.id) }}">
+                <button class="btn btn-primary">Update Blog Post</button>
+            </a>
+            <a href="{{ url_for('post_delete', post_id = post.id) }}">
+                <button class="btn btn-danger">Delete Blog Post</button>
+            </a>
+
+    </div>
+    {% endif %}
+{% endblock content %}
